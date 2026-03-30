@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 1. Set React's index.html as the primary homepage fallback ahead of WordPress index.php
+DirectoryIndex index.html index.php
+
+# 2. Let static files (images, css, wp-admin) pass through naturally
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 3. INTERCEPT REACT ROUTES: Force explicit React App pages to use the React index.html
+RewriteRule ^(publisher|advertiser|adsistant|targeting|contact|p/.*?)/?$ /index.html [L]
+
+# 4. EVERYTHING ELSE (Your Old WordPress Pages): Send to WordPress to handle them normally
+RewriteRule . /index.php [L]
+</IfModule>

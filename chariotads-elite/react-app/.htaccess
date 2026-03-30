@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 1. Let WordPress keep control of the Dashboard & API
+RewriteRule ^(wp-admin|wp-includes|wp-content|wp-json|wp-login\.php)(/.*)?$ - [L]
+RewriteRule ^index\.php$ - [L]
+
+# 2. Let static files (images, css) pass through normally
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 3. Send all other traffic to the React App (Frontend SPA routing)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>
