@@ -296,7 +296,7 @@ const PublisherAdvertiser: React.FC = () => {
   return (
     <section className="join-section">
       <div className="join-bg-wrapper">
-        <img src="/assets/images/chariotads_elite_dashboard_devices.png" alt="Dashboard background" className="join-bg-img" />
+        <img loading="lazy" src="/assets/images/chariotads_elite_dashboard_devices.png" alt="Dashboard background" className="join-bg-img" />
         <div className="join-overlay"></div>
       </div>
       <div className="container relative z-10">
@@ -398,7 +398,7 @@ const BlogSection: React.FC = () => {
   return (
     <section className="blog-section" id="blog">
       <div className="blog-banner">
-        <motion.div className="banner-person" initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }}><img src="/assets/images/excited_person_hero.png" alt="Breaking News" /></motion.div>
+        <motion.div className="banner-person" initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }}><img loading="lazy" src="/assets/images/excited_person_hero.png" alt="Breaking News" /></motion.div>
         <motion.div className="breaking-news-box" initial={{ opacity: 0, x: 50, rotate: 0 }} whileInView={{ opacity: 1, x: 0, rotate: -5 }} viewport={{ once: true }} transition={{ duration: 0.8 }}><h2>BREAKING<br/><span className="news-text">NEWS</span></h2></motion.div>
       </div>
       <div className="container">

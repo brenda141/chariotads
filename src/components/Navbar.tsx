@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
     }, 100);
   };
 
-  const dashboardUrl = "http://dashboard.chariotads.com/index.php?page=index/register";
+
 
   return (
     <nav className="navbar">
@@ -66,11 +66,17 @@ const Navbar: React.FC = () => {
           </div>
           <a onClick={handleBlogScroll} className="nav-link" style={{ cursor: 'pointer' }}>NEWS</a>
           <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsOpen(false)}>CONTACT</NavLink>
-          <a href={dashboardUrl} className="login-btn mobile-only">Login</a>
+          
+          {/* Mobile Only Auth Links */}
+          <div className="mobile-only" style={{ display: isOpen ? 'flex' : 'none', flexDirection: 'column', gap: '10px', marginTop: '10px' }}>
+            <a href="http://dashboard.chariotads.com/index.php?page=index/login" className="login-btn" style={{ background: 'transparent', border: '1px solid var(--elite-orange)' }}>Login</a>
+            <a href="http://dashboard.chariotads.com/index.php?page=index/register" className="login-btn">Sign Up</a>
+          </div>
         </div>
 
-        <div className="nav-actions desktop-only">
-          <a href={dashboardUrl} className="login-btn">Login</a>
+        <div className="nav-actions desktop-only" style={{ display: 'flex', gap: '15px' }}>
+          <a href="http://dashboard.chariotads.com/index.php?page=index/login" className="login-btn" style={{ background: 'transparent', border: '1px solid var(--elite-orange)' }}>Login</a>
+          <a href="http://dashboard.chariotads.com/index.php?page=index/register" className="login-btn">Sign Up</a>
         </div>
 
         <button className="mobile-menu-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
