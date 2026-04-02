@@ -4,13 +4,38 @@ import { Mail, MessageSquare, HelpCircle, Send, Globe, Shield } from 'lucide-rea
 import './ContactPage.css';
 
 const ContactPage: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In a real app, you'd send this to your backend or a service like Formspree
-    // For now, we'll simulate a successful submission
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('https://chariotads.com/wp-content/themes/chariotads-elite/send-email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        const result = await response.json();
+        setError(result.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Failed to connect to the server. Please check your internet connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const faqs = [
@@ -91,13 +116,14 @@ const ContactPage: React.FC = () => {
                      ) : (
                         <form className="elite-form" onSubmit={handleSubmit}>
                            <div className="form-row">
-                              <input type="text" placeholder="Full Name" required />
-                              <input type="email" placeholder="Email Address" required />
+                              <input type="text" name="name" placeholder="Full Name" required />
+                              <input type="email" name="email" placeholder="Email Address" required />
                            </div>
-                           <input type="text" placeholder="Subject" className="full-width" required />
-                           <textarea placeholder="How can we help you?" className="full-width" required></textarea>
-                           <button type="submit" className="submit-btn" id="contact-submit">
-                              SEND MESSAGE <Send size={18} />
+                           <input type="text" name="subject" placeholder="Subject" className="full-width" required />
+                           <textarea name="message" placeholder="How can we help you?" className="full-width" required></textarea>
+                           {error && <p className="form-error-msg">{error}</p>}
+                           <button type="submit" className="submit-btn" id="contact-submit" disabled={isSubmitting}>
+                              {isSubmitting ? "SENDING..." : "SEND MESSAGE"} <Send size={18} />
                            </button>
                         </form>
                      )}
