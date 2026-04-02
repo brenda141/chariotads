@@ -11,9 +11,6 @@ const ContactPage: React.FC = () => {
     // In a real app, you'd send this to your backend or a service like Formspree
     // For now, we'll simulate a successful submission
     setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-    }, 5000);
   };
 
   const faqs = [
@@ -80,12 +77,17 @@ const ContactPage: React.FC = () => {
                         <h3>Send us a message</h3>
                      </div>
                      {isSubmitted ? (
-                        <div className="form-success-message">
+                        <motion.div 
+                          className="form-success-message"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5 }}
+                        >
                            <Shield color="#fb923c" size={48} />
                            <h3>Message Sent!</h3>
                            <p>Thank you for contacting our elite support team. We will get back to you shortly.</p>
-                           <button onClick={() => setIsSubmitted(false)} className="submit-btn">SEND ANOTHER</button>
-                        </div>
+                           <button onClick={() => setIsSubmitted(false)} className="submit-btn" style={{ maxWidth: '250px' }}>SEND ANOTHER</button>
+                        </motion.div>
                      ) : (
                         <form className="elite-form" onSubmit={handleSubmit}>
                            <div className="form-row">
