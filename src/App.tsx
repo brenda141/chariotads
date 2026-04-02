@@ -7,6 +7,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SEO from './components/SEO';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -33,6 +34,7 @@ import './FAQPage.css';
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Navbar />
         
