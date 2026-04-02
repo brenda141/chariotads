@@ -179,7 +179,7 @@ const TermsPage: React.FC = () => {
                 <div className="sub-section">
                   <h4>Refunds:</h4>
                   <p>
-                    ChariotAds does not offer refunds once an ad campaign has started, except in cases of technical failure or error caused by ChariotAds. If you believe you are eligible for a refund, please contact us at <a href="mailto:support@cockchante.com">support@cockchante.com</a> for assistance.
+                    ChariotAds does not offer refunds once an ad campaign has started, except in cases of technical failure or error caused by ChariotAds. If you believe you are eligible for a refund, please contact us at <a href="mailto:support@chariotads.com">support@chariotads.com</a> for assistance.
                   </p>
                 </div>
               </div>
@@ -188,7 +188,7 @@ const TermsPage: React.FC = () => {
                 <h3>11. Contact Information</h3>
                 <p>For any questions or support inquiries, please reach out to us via email:</p>
                 <div className="contact-box">
-                  <p><strong>Support Email:</strong> <a href="mailto:support@cockchante.com">support@cockchante.com</a></p>
+                  <p><strong>Support Email:</strong> <a href="mailto:support@chariotads.com">support@chariotads.com</a></p>
                 </div>
               </div>
             </div>

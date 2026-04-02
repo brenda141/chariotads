@@ -112,7 +112,7 @@ const ContactPage: React.FC = () => {
                <motion.div className="info-card" whileHover={{ y: -10 }}>
                   <Mail size={40} color="#fb923c" />
                   <h4>Email Support</h4>
-                  <p>support@cockchante.com</p>
+                  <p>support@chariotads.com</p>
                </motion.div>
                <motion.div className="info-card" whileHover={{ y: -10 }}>
                   <Globe size={40} color="#fb923c" />
@@ -122,7 +122,7 @@ const ContactPage: React.FC = () => {
                <motion.div className="info-card" whileHover={{ y: -10 }}>
                   <Shield size={40} color="#fb923c" />
                   <h4>Security Team</h4>
-                  <p>security@cockchante.com</p>
+                  <p>security@chariotads.com</p>
                </motion.div>
            </div>
         </div>
