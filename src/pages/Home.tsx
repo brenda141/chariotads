@@ -284,7 +284,7 @@ const InterfaceSection: React.FC = () => {
             <li><div className="bullet-dot"></div><span>ZERO LATENCY ANALYTICS</span></li>
             <li><div className="bullet-dot"></div><span>HYPER-FLUID USER INTERFACE</span></li>
           </ul>
-          <button className="primary-btn interface-btn">Explore the Dashboard</button>
+          <a href="http://dashboard.chariotads.com/index.php?page=index/register" className="primary-btn interface-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>Explore the Dashboard</a>
         </motion.div>
       </div>
     </section>
@@ -341,24 +341,28 @@ const PublisherAdvertiser: React.FC = () => {
 };
 
 const ChariotadsBigLogo: React.FC = () => (
-    <svg width="520" height="200" viewBox="0 0 520 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="lifestyle-logo-svg">
-      <defs>
-        <linearGradient id="wheelGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#fb923c"/>
-          <stop offset="50%" stopColor="#f59e0b"/>
-          <stop offset="100%" stopColor="#ea580c"/>
-        </linearGradient>
-        <filter id="glow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#000" floodOpacity="0.3"/></filter>
-      </defs>
-      <g transform="translate(60, 100)" filter="url(#glow)">
-        <line x1="-52" y1="-10" x2="-32" y2="-10" stroke="#fb923c" strokeWidth="4" strokeLinecap="round" opacity="0.8"/><line x1="-55" y1="0" x2="-30" y2="0" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" opacity="0.6"/><line x1="-50" y1="10" x2="-32" y2="10" stroke="#fb923c" strokeWidth="2" strokeLinecap="round" opacity="0.4"/><line x1="-48" y1="20" x2="-35" y2="20" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" opacity="0.3"/>
-        <circle cx="0" cy="0" r="50" stroke="url(#wheelGrad)" strokeWidth="6" fill="none"/><circle cx="0" cy="0" r="38" stroke="url(#wheelGrad)" strokeWidth="2" fill="none" opacity="0.4"/><line x1="0" y1="-50" x2="0" y2="-14" stroke="url(#wheelGrad)" strokeWidth="4" strokeLinecap="round"/><line x1="0" y1="50" x2="0" y2="14" stroke="url(#wheelGrad)" strokeWidth="4" strokeLinecap="round"/><line x1="-50" y1="0" x2="-14" y2="0" stroke="url(#wheelGrad)" strokeWidth="4" strokeLinecap="round"/><line x1="50" y1="0" x2="14" y2="0" stroke="url(#wheelGrad)" strokeWidth="4" strokeLinecap="round"/><line x1="-35" y1="-35" x2="-10" y2="-10" stroke="url(#wheelGrad)" strokeWidth="4" strokeLinecap="round"/><line x1="35" y1="35" x2="10" y2="10" stroke="url(#wheelGrad)" strokeWidth="4" strokeLinecap="round"/><line x1="-35" y1="35" x2="-10" y2="10" stroke="url(#wheelGrad)" strokeWidth="4" strokeLinecap="round"/><line x1="35" y1="-35" x2="10" y2="-10" stroke="url(#wheelGrad)" strokeWidth="4" strokeLinecap="round"/><circle cx="0" cy="0" r="12" fill="url(#wheelGrad)"/><circle cx="0" cy="0" r="5" fill="#0b2b4d"/><line x1="-3" y1="0" x2="3" y2="0" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/><line x1="0" y1="-3" x2="0" y2="3" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/>
-      </g>
-      <g filter="url(#shadow)"><text x="130" y="90" fontFamily="'Montserrat', sans-serif" fontSize="72" fontWeight="900" fill="white" letterSpacing="-3">Chariot</text><text x="395" y="90" fontFamily="'Montserrat', sans-serif" fontSize="72" fontWeight="900" fill="url(#wheelGrad)" letterSpacing="-3">ads</text></g>
-      <text x="490" y="60" fontFamily="'Montserrat', sans-serif" fontSize="18" fontWeight="700" fill="white" opacity="0.6">®</text>
+  <>
+    <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+      <filter id="remove-white-big">
+        <feColorMatrix type="matrix" values="1 0 0 0 0
+                                             0 1 0 0 0
+                                             0 0 1 0 0
+                                             -1 -1 -1 3 0"/>
+      </filter>
     </svg>
-  );
+    <img 
+      src="/chariotads_logo.png" 
+      alt="Chariot Ads" 
+      className="lifestyle-logo-img" 
+      style={{ 
+        maxWidth: '700px', 
+        width: '100%', 
+        height: 'auto', 
+        filter: 'url(#remove-white-big) drop-shadow(0 0 40px rgba(251, 146, 60, 0.3))' 
+      }} 
+    />
+  </>
+);
 
 const LifestyleSection: React.FC = () => {
   return (

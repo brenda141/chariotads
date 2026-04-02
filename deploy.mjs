@@ -17,6 +17,7 @@ async function deploy() {
     console.log(`\n📡 Connecting to FTP Server at ${process.env.FTP_HOST}...`);
     const client = new ftp.Client();
     client.ftp.verbose = false;
+    client.ftp.timeout = 600000; // 10 minutes timeout for slow connections
 
     try {
         await client.access({
@@ -32,6 +33,10 @@ async function deploy() {
         await client.ensureDir("/"); // Because HestiaCP chroots 'chariotads_orbyza' into public_html
         await client.uploadFromDir(path.join(__dirname, "dist"), "/");
         
+        console.log("⏳ Uploading WordPress Theme (chariotads-elite)...");
+        await client.ensureDir("/wp-content/themes/chariotads-elite");
+        await client.uploadFromDir(path.join(__dirname, "chariotads-elite"), "/wp-content/themes/chariotads-elite");
+
         console.log("🎉 DEPLOYMENT COMPLETE! All files are now live.");
     } catch (err) {
         console.error("❌ FTP Error Found:", err.message);

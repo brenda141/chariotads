@@ -16,6 +16,9 @@ import AdsistantPage from './AdsistantPage';
 import TargetingPage from './TargetingPage';
 import ContactPage from './ContactPage';
 import WordPressPage from './pages/WordPressPage';
+import TermsPage from './TermsPage';
+import PrivacyPage from './PrivacyPage';
+import FAQPage from './FAQPage';
 
 // Styles
 import './PublisherPage.css';
@@ -23,6 +26,9 @@ import './AdvertiserPage.css';
 import './AdsistantPage.css';
 import './TargetingPage.css';
 import './ContactPage.css';
+import './TermsPage.css';
+import './PrivacyPage.css';
+import './FAQPage.css';
 
 const App: React.FC = () => {
   return (
@@ -100,6 +106,42 @@ const App: React.FC = () => {
                 canonical="https://chariotads.com/contact"
               />
               <ContactPage />
+            </>
+          } />
+
+          {/* Terms & Conditions Route */}
+          <Route path="/terms" element={
+            <>
+              <SEO 
+                title="Terms & Conditions - Chariotads Elite Network" 
+                description="Read our advertising and publishing terms and conditions. Learn about your responsibilities and our commitment to quality."
+                canonical="https://chariotads.com/terms"
+              />
+              <TermsPage />
+            </>
+          } />
+
+          {/* Privacy Policy Route */}
+          <Route path="/privacy" element={
+            <>
+              <SEO 
+                title="Privacy Policy - Chariotads Elite Network" 
+                description="Learn about how Chariotads collects, uses, and protects your personal data. Your privacy and data rights are our priority."
+                canonical="https://chariotads.com/privacy"
+              />
+              <PrivacyPage />
+            </>
+          } />
+
+          {/* FAQ Route */}
+          <Route path="/faq" element={
+            <>
+              <SEO 
+                title="FAQ - Frequently Asked Questions - Chariotads Elite Network" 
+                description="Get answers to your most common questions about advertising and publishing with Chariotads. Learn how to grow your business with us."
+                canonical="https://chariotads.com/faq"
+              />
+              <FAQPage />
             </>
           } />
 

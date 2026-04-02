@@ -135,9 +135,15 @@
 
 @media (max-width: 1024px) {
   .targeting-grid { grid-template-columns: 1fr 1fr; }
+  .targeting-hero { padding: 40px 0; }
+  .section-title h2 { font-size: 1.8rem; text-align: center; }
+  .targeting-card { padding: 30px 20px; min-height: auto; }
+  .targeting-cta { margin-top: 60px; }
+  .targeting-cta h3 { font-size: 2rem; }
 }
 
 @media (max-width: 768px) {
-  .targeting-grid { grid-template-columns: 1fr; }
-  .targeting-cta h3 { font-size: 1.8rem; }
+  .targeting-grid { grid-template-columns: 1fr; gap: 20px; }
+  .targeting-cta h3 { font-size: 1.5rem; }
+  .targeting-gs-btn { width: 100%; display: block; padding: 1rem; box-sizing: border-box; }
 }

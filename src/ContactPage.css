@@ -238,6 +238,20 @@
 }
 
 @media (max-width: 1024px) {
-  .contact-grid, .info-cards-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-hero { padding: 40px 0; }
   .contact-hero-content h1 { font-size: 2.5rem; }
+  .contact-hero-content p { font-size: 1rem; }
+  
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; padding: 40px 0; }
+  .info-cards-grid { grid-template-columns: 1fr; gap: 20px; }
+  .contact-info-cards { padding: 40px 0; }
+  .info-card { padding: 30px 20px; }
+  
+  .elite-form { padding: 20px; }
+  .form-row { grid-template-columns: 1fr; gap: 20px; }
+  
+  .contact-footer-cta { padding: 60px 0; }
+  .contact-footer-cta h2 { font-size: 1.8rem; }
+  .contact-footer-cta p { font-size: 1rem; margin-bottom: 30px; }
+  .contact-gs-btn { width: 100%; display: block; padding: 1rem; box-sizing: border-box; }
 }

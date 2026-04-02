@@ -71,6 +71,69 @@ h1, h2, h3 { font-weight: 900; letter-spacing: -0.02em; text-transform: uppercas
 .elite-logo-wrapper {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+.elite-logo-text {
+  font-weight: 900;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+.elite-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.social-icon:hover {
+  background: var(--elite-orange);
+  border-color: var(--elite-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(251, 146, 60, 0.4);
+}
+
+/* Header Specific Social Styles */
+.elite-nav .elite-social-links {
+  gap: 8px;
+}
+.elite-nav .social-icon {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  opacity: 0.6;
+}
+.elite-nav .social-icon:hover {
+  opacity: 1;
+  background: transparent;
+  transform: scale(1.1);
+  box-shadow: none;
+}
+.elite-nav .social-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hide-mobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile { display: none; }
 }
 
 /* Footer */

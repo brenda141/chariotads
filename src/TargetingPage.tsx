@@ -46,7 +46,7 @@ const TargetingPage: React.FC = () => {
 
            <div className="targeting-cta">
               <h3>START MAKING MONEY WITH <br/><span className="highlight">CHARIOTADS TODAY!</span></h3>
-              <button className="targeting-gs-btn">GET STARTED NOW</button>
+              <a href="http://dashboard.chariotads.com/index.php?page=index/register" className="targeting-gs-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>GET STARTED NOW</a>
            </div>
         </div>
       </section>

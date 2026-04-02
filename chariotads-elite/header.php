@@ -15,6 +15,9 @@
             <?php echo do_shortcode('[elite_logo]'); ?>
         </a>
         <div class="nav-links">
+            <div class="hide-mobile">
+                <?php echo do_shortcode('[elite_social_links]'); ?>
+            </div>
             <a href="http://dashboard.chariotads.com/index.php?page=index/register" class="elite-btn" style="padding: 10px 25px; text-decoration: none; display: inline-block;">LOGIN / SIGN UP</a>
         </div>
     </div>

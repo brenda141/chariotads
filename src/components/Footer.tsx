@@ -2,21 +2,27 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const ChariotLogo: React.FC = () => (
-  <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="rimGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#fb923c"/>
-        <stop offset="100%" stopColor="#f59e0b"/>
-      </linearGradient>
-      <linearGradient id="hubGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#fbbf24"/>
-        <stop offset="100%" stopColor="#ea580c"/>
-      </linearGradient>
-    </defs>
-    <circle cx="26" cy="22" r="16" stroke="url(#rimGrad)" strokeWidth="2.5"/>
-    <circle cx="26" cy="22" r="4.5" fill="url(#hubGrad)"/>
-    <circle cx="26" cy="22" r="2" fill="#0a1a2e"/>
-  </svg>
+  <>
+    <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+      <filter id="remove-white-footer">
+        <feColorMatrix type="matrix" values="1 0 0 0 0
+                                             0 1 0 0 0
+                                             0 0 1 0 0
+                                             -1 -1 -1 3 0"/>
+      </filter>
+    </svg>
+    <img 
+      src="/chariotads_logo.png" 
+      alt="Chariot Ads" 
+      style={{ 
+        height: '110px', 
+        width: 'auto', 
+        objectFit: 'contain',
+        filter: 'url(#remove-white-footer) drop-shadow(0 0 12px rgba(251, 146, 60, 0.4))',
+        marginLeft: '-25px'
+      }} 
+    />
+  </>
 );
 
 const Footer: React.FC = () => {
@@ -39,7 +45,6 @@ const Footer: React.FC = () => {
           <div className="footer-logo-col">
             <div className="logo-section">
               <ChariotLogo />
-              <span className="logo-text">Chariotads</span>
             </div>
             <p className="copyright-text">© 2006-2026 Chariotads.com<br/>All rights reserved.</p>
           </div>
@@ -65,16 +70,19 @@ const Footer: React.FC = () => {
             <ul className="footer-links">
               <li><a href="/" onClick={handleBlogScroll}>Latest News</a></li>
               <li><NavLink to="/contact">Help & Contact</NavLink></li>
+              <li><NavLink to="/terms">Terms & Conditions</NavLink></li>
+              <li><NavLink to="/privacy">Privacy Policy</NavLink></li>
+              <li><NavLink to="/faq">FAQ</NavLink></li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
           <div className="footer-socials">
-             <a href="https://chariotads.com/" className="social-icon">X</a>
-             <a href="https://chariotads.com/" className="social-icon">Facebook</a>
-             <a href="https://chariotads.com/" className="social-icon">Instagram</a>
-             <a href="https://chariotads.com/" className="social-icon">LinkedIn</a>
+             <a href="https://x.com/charioads36" target="_blank" rel="noopener noreferrer" className="social-link">X</a>
+             <a href="https://www.facebook.com/profile.php?id=61588052168432" target="_blank" rel="noopener noreferrer" className="social-link">Facebook</a>
+             <a href="https://chariotads.com/" target="_blank" rel="noopener noreferrer" className="social-link">Instagram</a>
+             <a href="https://www.linkedin.com/in/chariotads-promo-8a43bb3b4" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
           </div>
           <p className="copyright-text">Elite Advertising Network - Performance Driven.</p>
         </div>
