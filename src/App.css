@@ -656,8 +656,69 @@ body {
 .letter-j { top: 10%; left: -20px; }
 .letter-y { bottom: 5%; right: -20px; }
 
-@media (max-width: 1200px) {
-  .elite-mosaic { display: none; }
+@media (max-width: 1024px) {
+  .elite-mosaic {
+    width: 250px; /* Scaled down for smaller desktop/tablet */
+    height: auto;
+    opacity: 0.6; /* Slight transparency to prevent text blocking */
+  }
+  .pos-1, .pos-2, .pos-3, .pos-4, .pos-6 {
+    width: 150px;
+    height: auto;
+  }
+  .m-img-sm {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .elite-background-mosaics {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    z-index: 5;
+    pointer-events: auto;
+  }
+  .elite-mosaic {
+    position: relative;
+    top: 0; left: 0; right: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    opacity: 1;
+  }
+  .elite-mosaic.left, .elite-mosaic.right {
+    align-items: center;
+    flex-direction: row;
+  }
+  .mosaic-letter { display: none; }
+  .elite-mosaic .m-img, .pos-1, .pos-2, .pos-3, .pos-4, .pos-6 {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: calc(33% - 10px);
+    max-width: 120px;
+    height: 150px;
+    transform: none !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .pos-5 {
+    position: relative;
+    top: auto; right: auto;
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .elite-mosaic .m-img {
@@ -1200,9 +1261,56 @@ body {
   transform: scale(1.1);
 }
 
+
 /* General Responsive */
-@media (max-width: 1200px) {
-  .elite-mosaic { display: none; }
+
+@media (max-width: 768px) {
+  .elite-background-mosaics {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    z-index: 5;
+    pointer-events: auto;
+  }
+  .elite-mosaic {
+    position: relative;
+    top: 0; left: 0; right: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    opacity: 1;
+  }
+  .elite-mosaic.left, .elite-mosaic.right {
+    align-items: center;
+    flex-direction: row;
+  }
+  .mosaic-letter { display: none; }
+  .elite-mosaic .m-img, .pos-1, .pos-2, .pos-3, .pos-4, .pos-6 {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: calc(33% - 10px);
+    max-width: 120px;
+    height: 150px;
+    transform: none !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .pos-5 {
+    position: relative;
+    top: auto; right: auto;
+    display: flex;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 1024px) {
