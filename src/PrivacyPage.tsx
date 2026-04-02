@@ -46,7 +46,7 @@ const PrivacyPage: React.FC = () => {
               </p>
 
               <div className="contact-callout">
-                If you have additional questions, you can contact us at: <a href="mailto:support@chariotads.com">support@chariotads.com</a>.
+                If you have additional questions, you can contact us at: <a href="mailto:support@cockchante.com">support@cockchante.com</a>.
               </div>
 
               <div className="privacy-section">
@@ -72,7 +72,7 @@ const PrivacyPage: React.FC = () => {
                   <div className="right-item">Data portability</div>
                   <div className="right-item">Withdraw consent</div>
                 </div>
-                <p>To exercise these rights, contact us at <a href="mailto:support@chariotads.com">support@chariotads.com</a>.</p>
+                <p>To exercise these rights, contact us at <a href="mailto:support@cockchante.com">support@cockchante.com</a>.</p>
               </div>
 
               <div className="privacy-section">
@@ -127,7 +127,7 @@ const PrivacyPage: React.FC = () => {
               <div className="privacy-section">
                 <h3>8. Children’s Privacy</h3>
                 <p>Protecting children online is important. ChariotAds does not knowingly collect personal data from children under 13.</p>
-                <p>If you believe your child has provided personal information, contact us at <a href="mailto:support@chariotads.com">support@chariotads.com</a>. We will promptly remove such data.</p>
+                <p>If you believe your child has provided personal information, contact us at <a href="mailto:support@cockchante.com">support@cockchante.com</a>. We will promptly remove such data.</p>
               </div>
 
               <div className="privacy-section">

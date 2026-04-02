@@ -4,6 +4,18 @@ import { Mail, MessageSquare, HelpCircle, Send, Globe, Shield } from 'lucide-rea
 import './ContactPage.css';
 
 const ContactPage: React.FC = () => {
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // In a real app, you'd send this to your backend or a service like Formspree
+    // For now, we'll simulate a successful submission
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 5000);
+  };
+
   const faqs = [
     { q: "How do I join Chariotads?", a: "To join as a publisher or advertiser, simply click 'Join Now' on our home page or navigate to the respective role pages. Fill out the application, and our elite team will review it within 24 hours." },
     { q: "What are the payment terms?", a: "We offer weekly payouts for publishers with a low minimum threshold ($50). We support Wire, PayPal, and Paxum." },
@@ -63,21 +75,30 @@ const ContactPage: React.FC = () => {
                    whileInView={{ opacity: 1, scale: 1 }}
                    viewport={{ once: true }}
                  >
-                    <div className="card-header">
-                       <MessageSquare color="white" size={24} />
-                       <h3>Send us a message</h3>
-                    </div>
-                    <form className="elite-form">
-                       <div className="form-row">
-                          <input type="text" placeholder="Full Name" />
-                          <input type="email" placeholder="Email Address" />
-                       </div>
-                       <input type="text" placeholder="Subject" className="full-width" />
-                       <textarea placeholder="How can we help you?" className="full-width"></textarea>
-                       <button type="submit" className="submit-btn">
-                          SEND MESSAGE <Send size={18} />
-                       </button>
-                    </form>
+                     <div className="card-header">
+                        <MessageSquare color="white" size={24} />
+                        <h3>Send us a message</h3>
+                     </div>
+                     {isSubmitted ? (
+                        <div className="form-success-message">
+                           <Shield color="#fb923c" size={48} />
+                           <h3>Message Sent!</h3>
+                           <p>Thank you for contacting our elite support team. We will get back to you shortly.</p>
+                           <button onClick={() => setIsSubmitted(false)} className="submit-btn">SEND ANOTHER</button>
+                        </div>
+                     ) : (
+                        <form className="elite-form" onSubmit={handleSubmit}>
+                           <div className="form-row">
+                              <input type="text" placeholder="Full Name" required />
+                              <input type="email" placeholder="Email Address" required />
+                           </div>
+                           <input type="text" placeholder="Subject" className="full-width" required />
+                           <textarea placeholder="How can we help you?" className="full-width" required></textarea>
+                           <button type="submit" className="submit-btn" id="contact-submit">
+                              SEND MESSAGE <Send size={18} />
+                           </button>
+                        </form>
+                     )}
                  </motion.div>
               </div>
            </div>
@@ -88,21 +109,21 @@ const ContactPage: React.FC = () => {
       <section className="contact-info-cards">
         <div className="container">
            <div className="info-cards-grid">
-              <motion.div className="info-card" whileHover={{ y: -10 }}>
-                 <Mail size={40} color="#fb923c" />
-                 <h4>Email Support</h4>
-                 <p>support@chariotads.com</p>
-              </motion.div>
-              <motion.div className="info-card" whileHover={{ y: -10 }}>
-                 <Globe size={40} color="#fb923c" />
-                 <h4>Global HQ</h4>
-                 <p>Elite Business Tower, Dubai</p>
-              </motion.div>
-              <motion.div className="info-card" whileHover={{ y: -10 }}>
-                 <Shield size={40} color="#fb923c" />
-                 <h4>Security Team</h4>
-                 <p>security@chariotads.com</p>
-              </motion.div>
+               <motion.div className="info-card" whileHover={{ y: -10 }}>
+                  <Mail size={40} color="#fb923c" />
+                  <h4>Email Support</h4>
+                  <p>support@cockchante.com</p>
+               </motion.div>
+               <motion.div className="info-card" whileHover={{ y: -10 }}>
+                  <Globe size={40} color="#fb923c" />
+                  <h4>Global HQ</h4>
+                  <p>Elite Business Tower, Dubai</p>
+               </motion.div>
+               <motion.div className="info-card" whileHover={{ y: -10 }}>
+                  <Shield size={40} color="#fb923c" />
+                  <h4>Security Team</h4>
+                  <p>security@cockchante.com</p>
+               </motion.div>
            </div>
         </div>
       </section>

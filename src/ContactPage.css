@@ -237,6 +237,35 @@
   color: white;
 }
 
+.form-success-message {
+  padding: 60px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.form-success-message h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fb923c;
+}
+
+.form-success-message p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 300px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.form-success-message .submit-btn {
+  max-width: 250px;
+}
+
 @media (max-width: 1024px) {
   .contact-hero { padding: 40px 0; }
   .contact-hero-content h1 { font-size: 2.5rem; }

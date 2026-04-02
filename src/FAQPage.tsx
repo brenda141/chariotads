@@ -217,7 +217,7 @@ const FAQPage: React.FC = () => {
              <h2>Still have questions?</h2>
              <p>Our elite support team is ready to help you with any inquiries.</p>
              <div className="cta-btns">
-                <a href="mailto:support@chariotads.com" className="faq-primary-btn">EMAIL SUPPORT</a>
+                <a href="mailto:support@cockchante.com" className="faq-primary-btn">EMAIL SUPPORT</a>
                 <a href="/contact" className="faq-secondary-btn">CONTACT PAGE</a>
              </div>
           </div>
