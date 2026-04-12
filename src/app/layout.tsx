@@ -41,6 +41,10 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: '/assets/images/branded-wheel.png',
+    apple: '/assets/images/branded-wheel.png',
+  },
   robots: {
     index: true,
     follow: true,
