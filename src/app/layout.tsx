@@ -15,8 +15,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Chariotads - Elite Advertising Network",
-  description: "Scale your impact with Chariotads. Our elite ad network offers high-speed performance advertising for publishers and advertisers worldwide.",
+  title: {
+    default: "Top Adult Advertising Network | Buy & Sell Adult Traffic",
+    template: "%s",
+  },
+  description: "Join the best adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
   keywords: [
     "buy cheap adult traffic", "buy and sell adult traffic", "advertise my adult website",
     "adult ad networks for publishers", "adult advertising network", "adult ads network",
@@ -65,8 +68,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://chariotads.com/",
-    title: "Chariotads - Elite Advertising Network",
-    description: "Scale your impact with Chariotads. Our elite ad network offers high-speed performance advertising.",
+    title: "Top Adult Advertising Network | Buy & Sell Adult Traffic",
+    description: "Join the best adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
     siteName: "Chariotads",
     images: [
       {
@@ -79,8 +82,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chariotads - Elite Advertising Network",
-    description: "Scale your impact with Chariotads. Our elite ad network offers high-speed performance advertising.",
+    title: "Top Adult Advertising Network | Buy & Sell Adult Traffic",
+    description: "Join the best adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
     creator: "@chariotads36",
     images: ["https://chariotads.com/assets/images/logo.webp"],
   },
