@@ -373,58 +373,6 @@ const LifestyleSection: React.FC = () => {
   );
 };
 
-const BlogSection: React.FC = () => {
-  const [posts, setPosts] = useState<WordPressPost[]>([]);
-
-  useEffect(() => {
-    const loadPosts = async () => {
-      const data = await fetchLatestPosts(3);
-      if (data && data.length > 0) {
-        setPosts(data);
-      } else {
-        setPosts([
-          { id: 1, title: { rendered: 'GEO Spotlight: Japan' }, link: '#', excerpt: { rendered: '' }, date: '' },
-          { id: 2, title: { rendered: 'Chariotads Partners With 69Cash' }, link: '#', excerpt: { rendered: '' }, date: '' },
-          { id: 3, title: { rendered: 'Auto-Optimization Technology' }, link: '#', excerpt: { rendered: '' }, date: '' }
-        ] as any);
-      }
-    };
-    loadPosts();
-  }, []);
-
-  return (
-    <section className="blog-section" id="blog">
-      <div className="blog-banner">
-        <motion.div className="banner-person" initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }}><img loading="lazy" src="/assets/images/excited_person_hero.png" alt="Breaking News" /></motion.div>
-        <motion.div className="breaking-news-box" initial={{ opacity: 0, x: 50, rotate: 0 }} whileInView={{ opacity: 1, x: 0, rotate: -5 }} viewport={{ once: true }} transition={{ duration: 0.8 }}><h2>BREAKING<br/><span className="news-text">NEWS</span></h2></motion.div>
-      </div>
-      <div className="container">
-        <motion.div className="featured-card-wrapper" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
-          <div className="blog-featured-card">
-            <div className="featured-image-box"><img src="/assets/images/miniature_keyboard.png" alt="Featured" /></div>
-            <div className="featured-info-box">
-              <span className="featured-category-tag">FEATURED</span>
-              <h3>Why Your Ads Are Not Showing and How to Fix It Quickly</h3>
-              <p>For publishers, few things are more frustrating than adding ad code to a website and seeing nothing appear... <a href="#" className="read-more">More</a></p>
-            </div>
-          </div>
-        </motion.div>
-        <div className="section-title-mini"><h4>LATEST NEWS</h4><div className="line"></div></div>
-        <div className="blog-posts-grid">
-          {posts.map((post, i) => (
-            <motion.div key={post.id} className="blog-item-modern" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 + (i * 0.1) }}>
-              <div className="blog-icon-wrapper"><img src="/assets/images/orange_shapes.png" alt="Icon" className="blog-item-icon" /></div>
-              <div className="blog-info-wrapper">
-                <h4>{post.title.rendered}</h4>
-                <a href={post.link} className="read-more-link-text">READ MORE</a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 const CTASection: React.FC = () => {
   const dashboardUrl = "http://dashboard.chariotads.com/index.php?page=index/register";
@@ -470,7 +418,6 @@ export default function Home() {
             <AdTypes />
             <PublisherAdvertiser />
             <LifestyleSection />
-            <BlogSection />
             <AEOSummarySection />
             <CTASection />
         </>

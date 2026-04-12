@@ -30,14 +30,6 @@ const ChariotLogo: React.FC = () => (
 const Footer: React.FC = () => {
   const router = useRouter();
 
-  const handleBlogScroll = (e: React.MouseEvent) => {
-    e.preventDefault();
-    router.push('/');
-    setTimeout(() => {
-      document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
-
   const dashboardUrl = "http://dashboard.chariotads.com/index.php?page=index/register";
 
   return (
@@ -70,7 +62,6 @@ const Footer: React.FC = () => {
           <div className="footer-col">
             <h4>SUPPORT</h4>
             <ul className="footer-links">
-              <li><a href="/" onClick={handleBlogScroll}>Latest News</a></li>
               <li><Link href="/contact">Help & Contact</Link></li>
               <li><Link href="/terms">Terms & Conditions</Link></li>
               <li><Link href="/privacy">Privacy Policy</Link></li>
