@@ -39,7 +39,7 @@ export default function AdsistantPage() {
           
           <div className="ads-hero-visual">
             <motion.img 
-              src="/assets/images/chariotads_elite_assistant_mascot.png" 
+              src="/assets/images/chariotads_elite_assistant_mascot.webp" 
               alt="Adsistant Elite Mascot" 
               className="ads-mascot-img"
               initial={{ opacity: 0, x: 50 }}
@@ -71,7 +71,7 @@ export default function AdsistantPage() {
            </div>
            <div className="ads-visual-col center">
               <div className="suggestion-bubble-group">
-                 <img src="/assets/images/chariotads_elite_assistant_mascot.png" alt="Mascot Circle" className="mascot-circle" />
+                 <img src="/assets/images/chariotads_elite_assistant_mascot.webp" width={1024} height={1024} loading="lazy"  alt="Mascot Circle" className="mascot-circle" / />
                  <motion.div 
                    className="bubble-text"
                    animate={{ y: [0, -10, 0] }}

@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: '/assets/images/branded-wheel.png',
-    apple: '/assets/images/branded-wheel.png',
+    icon: '/assets/images/branded-wheel.webp',
+    apple: '/assets/images/branded-wheel.webp',
   },
   robots: {
     index: true,
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     siteName: "Chariotads",
     images: [
       {
-        url: "https://chariotads.com/assets/images/logo.png",
+        url: "https://chariotads.com/assets/images/logo.webp",
         width: 1200,
         height: 630,
         alt: "Chariotads Ad Network",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     title: "Chariotads - Elite Advertising Network",
     description: "Scale your impact with Chariotads. Our elite ad network offers high-speed performance advertising.",
     creator: "@chariotads36",
-    images: ["https://chariotads.com/assets/images/logo.png"],
+    images: ["https://chariotads.com/assets/images/logo.webp"],
   },
 };
 
@@ -96,7 +96,7 @@ const jsonLd = {
       "url": "https://chariotads.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://chariotads.com/assets/images/logo.png"
+        "url": "https://chariotads.com/assets/images/logo.webp"
       },
       "description": "Chariotads is an elite advertising network that offers high-speed performance advertising for publishers and advertisers worldwide, specializing in web traffic, dating, gaming, and entertainment offers.",
       "sameAs": [

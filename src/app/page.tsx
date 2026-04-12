@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
           <div className="image-frame-wrapper">
              <motion.div className="floating-glow" animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.7, 0.4] }} transition={{ duration: 4, repeat: Infinity }} />
             <div className="image-circle">
-              <img src="/assets/images/hero_model_ai.png" alt="Elite Adult Network Model" className="hero-model" />
+              <img src="/assets/images/hero_model_ai.webp" width={1024} height={1024} fetchPriority="high"  alt="Elite Adult Network Model" className="hero-model" />
             </div>
           </div>
         </motion.div>
@@ -75,63 +75,63 @@ const FeatureItem: React.FC<{ icon: React.ReactNode, title: string, desc: string
 const Features: React.FC = () => {
   const features = [
     {
-      icon: <img src="/assets/images/elite_mascot_conversion.png" alt="Conversion" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/elite_mascot_conversion.webp" width={1024} height={1024} loading="lazy"  alt="Conversion" className="mascot-icon-img" />,
       title: "Convert your offers",
       desc: "Our traffic converts! Gaming, dating, and entertainment offers of all kinds.",
       color: "rgba(34, 197, 94, 0.5)",
       delay: 0.1
     },
     {
-      icon: <img src="/assets/images/elite_mascot_interface.png" alt="Interface" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/elite_mascot_interface.webp" width={1024} height={1024} loading="lazy"  alt="Interface" className="mascot-icon-img" />,
       title: "Modern Interface",
       desc: "Our sleek interface saves time and puts you in full control of your monetization.",
       color: "rgba(59, 130, 246, 0.5)",
       delay: 0.2
     },
     {
-      icon: <img src="/assets/images/elite_mascot_global.png" alt="Global" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/elite_mascot_global.webp" width={1024} height={1024} loading="lazy"  alt="Global" className="mascot-icon-img" />,
       title: "Global Coverage",
       desc: "Currently running across over 1 billion impressions daily worldwide.",
       color: "rgba(16, 185, 129, 0.5)",
       delay: 0.3
     },
     {
-      icon: <img src="/assets/images/elite_mascot_exclusive.png" alt="Exclusive" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/elite_mascot_exclusive.webp" width={1024} height={1024} loading="lazy"  alt="Exclusive" className="mascot-icon-img" />,
       title: "Exclusive Placements",
       desc: "Publishers trust Chariotads. Access spots you cannot find anywhere else!",
       color: "rgba(249, 115, 22, 0.5)",
       delay: 0.4
     },
     {
-      icon: <img src="/assets/images/elite_mascot_award.png" alt="Award" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/elite_mascot_award.webp" width={1024} height={1024} loading="lazy"  alt="Award" className="mascot-icon-img" />,
       title: "Award-Winning Service",
       desc: "Winner of over 30 industry awards. Quality is our highest priority.",
       color: "rgba(234, 179, 8, 0.5)",
       delay: 0.5
     },
     {
-      icon: <img src="/assets/images/elite_mascot_security.png" alt="Security" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/elite_mascot_security.webp" width={1024} height={1024} loading="lazy"  alt="Security" className="mascot-icon-img" />,
       title: "No Malware",
       desc: "Safe with us. We prosecute malware distributors to the full extent of the law.",
       color: "rgba(59, 130, 246, 0.5)",
       delay: 0.6
     },
     {
-      icon: <img src="/assets/images/elite_mascot_robust.png" alt="Robust" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/elite_mascot_robust.webp" width={1024} height={1024} loading="lazy"  alt="Robust" className="mascot-icon-img" />,
       title: "Robust Architecture",
       desc: "Distributed across 5 Datacenters and 3 CDNs for extreme speed and resiliency.",
       color: "rgba(6, 182, 212, 0.5)",
       delay: 0.7
     },
     {
-      icon: <img src="/assets/images/chariotads_elite_assistant_mascot.png" alt="Adsistant" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/chariotads_elite_assistant_mascot.webp" width={1024} height={1024} loading="lazy"  alt="Adsistant" className="mascot-icon-img" />,
       title: "Adsistant®",
       desc: "Use our proprietary Elite Tech to auto-optimize while you sleep (party, yoga.. whatever!)",
       color: "transparent",
       delay: 0.8
     },
     {
-      icon: <img src="/assets/images/elite_mascot_payment.png" alt="Payment" className="mascot-icon-img" />,
+      icon: <img src="/assets/images/elite_mascot_payment.webp" width={1024} height={1024} loading="lazy"  alt="Payment" className="mascot-icon-img" />,
       title: "Pay Your Way",
       desc: "Supports CPC and CPM billing (with CPA/CPL available for select partners).",
       color: "rgba(74, 222, 128, 0.5)",
@@ -160,25 +160,25 @@ const AdTypes: React.FC = () => {
       id: 'Banners',
       title: 'BANNERS',
       desc: 'Banners optimized for Mobile, Desktop, Tablet, or Smart TV / Console traffic with our advanced targeting, to ensure you get exactly the type of traffic you want for your needs.',
-      img: '/assets/images/ad_format_banners.png'
+      img: '/assets/images/ad_format_banners.webp'
     },
     {
       id: 'Pop-Unders',
       title: 'POP UNDERS',
       desc: 'PopUnders allow your promotion to be loaded behind the active window and then available to be seen when the visitor closes the window. Voila! Instant attention.',
-      img: '/assets/images/ad_format_popunder.png'
+      img: '/assets/images/ad_format_popunder.webp'
     },
     {
       id: 'Interstitial',
       title: 'INTERSTITIALS',
       desc: 'Full-page overlays that demand attention. High visibility and peak conversion for premium mobile dating and exclusive entertainment offers.',
-      img: '/assets/images/ad_format_interstitial.png'
+      img: '/assets/images/ad_format_interstitial.webp'
     },
     {
       id: 'Native ads',
       title: 'NATIVE ADS',
       desc: 'Subtle, organic placements that blend into content feeds. Highly effective for increasing engagement on premium galleries without disrupting user experience.',
-      img: '/assets/images/ad_format_native.png'
+      img: '/assets/images/ad_format_native.webp'
     }
   ];
 
@@ -187,12 +187,12 @@ const AdTypes: React.FC = () => {
       <div className="elite-background-mosaics">
          <div className="elite-mosaic left">
             <div className="mosaic-letter letter-j">J</div>
-            <motion.img initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} src="/assets/images/new_model_1.jpeg" alt="Ad Model 1" className="m-img pos-1" />
-            <motion.img initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} src="/assets/images/new_model_2.jpeg" alt="Ad Model 2" className="m-img pos-2" />
+            <motion.img initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} src="/assets/images/new_model_1.webp" alt="Ad Model 1" className="m-img pos-1" />
+            <motion.img initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} src="/assets/images/new_model_2.webp" alt="Ad Model 2" className="m-img pos-2" />
          </div>
          <div className="elite-mosaic right">
             <div className="mosaic-letter letter-y">Y</div>
-            <motion.img initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} src="/assets/images/new_model_3.jpeg" alt="Ad Model 3" className="m-img pos-4" />
+            <motion.img initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} src="/assets/images/new_model_3.webp" alt="Ad Model 3" className="m-img pos-4" />
          </div>
       </div>
       <div className="container relative z-10">
@@ -268,7 +268,7 @@ const InterfaceSection: React.FC = () => {
       <div className="container interface-container">
         <motion.div className="interface-visuals" initial={{ opacity: 0, scale: 0.9, x: -50 }} whileInView={{ opacity: 1, scale: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1.2 }}>
           <div className="device-composition">
-            <motion.img src="/assets/images/chariotads_elite_dashboard_devices.png" alt="Elite Dashboard" className="devices-img" animate={{ y: [0, -10, 0], rotateZ: [-1, 1, -1] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} />
+            <motion.img src="/assets/images/chariotads_elite_dashboard_devices.webp" alt="Elite Dashboard" className="devices-img" animate={{ y: [0, -10, 0], rotateZ: [-1, 1, -1] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} />
             <motion.div className="floating-ui-card card-1" animate={{ y: [0, -20, 0] }} transition={{ duration: 4, repeat: Infinity }}><BarChart size={24} color="#fb923c" /><span>Real-time CPM: $4.20</span></motion.div>
             <motion.div className="floating-ui-card card-2" animate={{ y: [0, 20, 0] }} transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}><Zap size={24} color="#fb923c" /><span>Direct Sale Active</span></motion.div>
           </div>
@@ -292,7 +292,7 @@ const PublisherAdvertiser: React.FC = () => {
   return (
     <section className="join-section">
       <div className="join-bg-wrapper">
-        <img loading="lazy" src="/assets/images/chariotads_elite_dashboard_devices.png" alt="Dashboard background" className="join-bg-img" />
+        <img src="/assets/images/chariotads_elite_dashboard_devices.webp" width={1024} height={1024} loading="lazy"  alt="Dashboard background" className="join-bg-img" />
         <div className="join-overlay"></div>
       </div>
       <div className="container relative z-10">
