@@ -37,6 +37,7 @@ export default function AdvertiserPage() {
       <section className="adv-hero">
         <div className="container">
           <div className="section-title">
+            <h1 className="seo-h1">Advertise Your Adult Website | Buy Targeted Web Traffic</h1>
             <div className="line"></div>
             <h2>ADVERTISING FEATURES</h2>
             <div className="line"></div>

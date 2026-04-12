@@ -33,7 +33,7 @@ export default function PublisherPage() {
             <div className="pub-icon-circle">
                <div className="inner-orb"></div>
             </div>
-            <h1>PUBLISH WITH <span className="highlight">CHARIOTADS</span></h1>
+            <h1>Monetize Your Website | <span className="highlight">Best Adult Ad Network for Publishers</span></h1>
             <p>
               Do you want the advertising on your website to be elite? What about malware-free, adware-free, and scam-free? 
               You've come to the right place, because Chariotads cares about your website and traffic as much as you do. 

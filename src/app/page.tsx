@@ -30,7 +30,8 @@ const Hero: React.FC = () => {
           transition={{ duration: 1 }}
         >
           <span className="tagline">The Elite Ad Network</span>
-          <h1>DRIVE IMPACT,<br/>SCALE FASTER.</h1>
+          <h1 className="vh">Elite Adult Advertising Network - Buy & Sell Traffic</h1>
+          <p className="hero-h1-style" aria-hidden="true">DRIVE IMPACT,<br/>SCALE FASTER.</p>
           <p>Extreme high-speed performance advertising. We built a global network that redefines conversion at scale.</p>
           <div className="cta-group">
             <Link href="/advertiser" className="primary-btn">Start a Campaign</Link>

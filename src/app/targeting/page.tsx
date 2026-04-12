@@ -22,6 +22,7 @@ export default function TargetingPage() {
       <section className="targeting-hero">
         <div className="container">
            <div className="section-title">
+             <h1 className="seo-h1">Advanced Ad Targeting Options | Precision Global Traffic</h1>
              <div className="line"></div>
              <h2>TARGETING OPTIONS</h2>
              <div className="line"></div>

@@ -17,7 +17,7 @@ export default function AdsistantPage() {
                animate={{ opacity: 1, scale: 1 }}
                transition={{ duration: 0.8 }}
             >
-               <h1>adsistant<span className="trademark">™</span></h1>
+               <h1>AI Adult Ads Optimization | <span className="trademark">Adsistant®</span></h1>
                <p className="subtitle">Your Personal Adsistant®</p>
             </motion.div>
             
