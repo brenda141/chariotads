@@ -1,5 +1,7 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const ChariotLogo: React.FC = () => (
@@ -28,7 +30,8 @@ const ChariotLogo: React.FC = () => (
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 1024);
@@ -39,7 +42,7 @@ const Navbar: React.FC = () => {
 
   const handleBlogScroll = () => {
     setIsOpen(false);
-    navigate('/');
+    router.push('/');
     setTimeout(() => {
       document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
@@ -50,23 +53,23 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="container nav-content">
-        <NavLink to="/" className="logo-section">
+        <Link href="/" className="logo-section">
           <ChariotLogo />
-        </NavLink>
+        </Link>
 
         <div className={`nav-links ${isOpen ? 'mobile-open' : ''}`}>
-          <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsOpen(false)}>HOME</NavLink>
-          <NavLink to="/publisher" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsOpen(false)}>PUBLISHER</NavLink>
+          <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>HOME</Link>
+          <Link href="/publisher" className={`nav-link ${pathname === '/publisher' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>PUBLISHER</Link>
           <div className="nav-dropdown">
             <span className="nav-link">ADVERTISERS <ChevronDown size={14} /></span>
             <div className="dropdown-menu">
-              <NavLink to="/advertiser" onClick={() => setIsOpen(false)}>Buy Traffic</NavLink>
-              <NavLink to="/adsistant" onClick={() => setIsOpen(false)}>Adsistant®</NavLink>
-              <NavLink to="/targeting" onClick={() => setIsOpen(false)}>Targeting</NavLink>
+              <Link href="/advertiser" onClick={() => setIsOpen(false)}>Buy Traffic</Link>
+              <Link href="/adsistant" onClick={() => setIsOpen(false)}>Adsistant®</Link>
+              <Link href="/targeting" onClick={() => setIsOpen(false)}>Targeting</Link>
             </div>
           </div>
           <a onClick={handleBlogScroll} className="nav-link" style={{ cursor: 'pointer' }}>NEWS</a>
-          <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsOpen(false)}>CONTACT</NavLink>
+          <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>CONTACT</Link>
           
           {/* Mobile Only Auth Links */}
           <div className="mobile-only" style={{ display: isOpen ? 'flex' : 'none', flexDirection: 'column', gap: '10px', marginTop: '10px' }}>

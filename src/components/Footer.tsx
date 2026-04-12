@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const ChariotLogo: React.FC = () => (
   <>
@@ -26,11 +28,11 @@ const ChariotLogo: React.FC = () => (
 );
 
 const Footer: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleBlogScroll = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigate('/');
+    router.push('/');
     setTimeout(() => {
       document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
@@ -59,9 +61,9 @@ const Footer: React.FC = () => {
           <div className="footer-col">
             <h4>ADVERTISERS</h4>
             <ul className="footer-links">
-              <li><NavLink to="/advertiser">Buy Traffic</NavLink></li>
-              <li><NavLink to="/adsistant">Adsistant®</NavLink></li>
-              <li><NavLink to="/targeting">Targeting</NavLink></li>
+              <li><Link href="/advertiser">Buy Traffic</Link></li>
+              <li><Link href="/adsistant">Adsistant®</Link></li>
+              <li><Link href="/targeting">Targeting</Link></li>
             </ul>
           </div>
 
@@ -69,10 +71,10 @@ const Footer: React.FC = () => {
             <h4>SUPPORT</h4>
             <ul className="footer-links">
               <li><a href="/" onClick={handleBlogScroll}>Latest News</a></li>
-              <li><NavLink to="/contact">Help & Contact</NavLink></li>
-              <li><NavLink to="/terms">Terms & Conditions</NavLink></li>
-              <li><NavLink to="/privacy">Privacy Policy</NavLink></li>
-              <li><NavLink to="/faq">FAQ</NavLink></li>
+              <li><Link href="/contact">Help & Contact</Link></li>
+              <li><Link href="/terms">Terms & Conditions</Link></li>
+              <li><Link href="/privacy">Privacy Policy</Link></li>
+              <li><Link href="/faq">FAQ</Link></li>
             </ul>
           </div>
         </div>

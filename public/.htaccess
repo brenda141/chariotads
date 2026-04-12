@@ -11,8 +11,11 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # 3. INTERCEPT REACT ROUTES: Force explicit React App pages to use the React index.html
-RewriteRule ^(publisher|advertiser|adsistant|targeting|contact|p/.*?)/?$ /index.html [L]
+RewriteRule ^(publisher|advertiser|adsistant|targeting|contact|terms|privacy|faq|p/.*?)/?$ /index.html [L]
 
-# 4. EVERYTHING ELSE (Your Old WordPress Pages): Send to WordPress to handle them normally
+# 4. REDIRECT AUTHOR PAGES TO HOME: Remove author pages as requested
+RewriteRule ^author/.*$ / [R=301,L]
+
+# 5. EVERYTHING ELSE (Your Old WordPress Pages): Send to WordPress to handle them normally
 RewriteRule . /index.php [L]
 </IfModule>
