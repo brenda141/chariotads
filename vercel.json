@@ -1,0 +1,12 @@
+{
+  "framework": "nextjs",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/author/(.*)",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

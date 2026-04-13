@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /static/
+Disallow: /api/
+Disallow: /author/
+
+# Host
+Host: https://chariotads.com
+
+# Sitemaps
+Sitemap: https://chariotads.com/sitemap.xml

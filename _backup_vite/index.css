@@ -1,0 +1,73 @@
+
+
+:root {
+  --primary: #fb923c; /* Vibrant Tangerine Accent */
+  --primary-glow: rgba(251, 146, 60, 0.4);
+  --bg-dark: #051424; /* Deep Midnight */
+  --bg-saphire: #0b2b4d; /* Rich Sapphire */
+  --bg-midnight: #030a13; /* Near Black Midnight */
+  --bg-gradient: linear-gradient(135deg, #0b2b4d 0%, #030a13 100%);
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --cursor-glow: rgba(251, 146, 60, 0.15);
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+  transition: all 0.2s ease;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}

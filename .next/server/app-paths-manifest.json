@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/adsistant/page": "app/adsistant/page.js",
+  "/advertiser/page": "app/advertiser/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/page": "app/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/publisher/page": "app/publisher/page.js",
+  "/targeting/page": "app/targeting/page.js",
+  "/terms/page": "app/terms/page.js"
+}

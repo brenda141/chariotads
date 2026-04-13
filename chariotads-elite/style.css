@@ -1,0 +1,150 @@
+/*
+Theme Name: Chariotads Elite
+Theme URI: https://chariotads.com/
+Author: Antigravity
+Description: A high-performance, elite advertising network theme. Fully Elementor compatible.
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: chariotads-elite
+*/
+
+/* --- ELITE CSS LIBRARY --- */
+:root {
+  --elite-orange: #fb923c;
+  --elite-amber: #f59e0b;
+  --elite-dark: #0a1a2e;
+  --elite-obsidian: #050b14;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--elite-obsidian);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Global Buttons for Elementor */
+.elementor-button, .elite-btn {
+  background: linear-gradient(135deg, var(--elite-orange), var(--elite-amber)) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  border: none !important;
+}
+
+.elementor-button:hover, .elite-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 20px rgba(251, 146, 60, 0.3) !important;
+}
+
+/* Elite Typography */
+h1, h2, h3 { font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; }
+
+/* Navbar */
+.elite-nav {
+  background: rgba(10, 26, 46, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.elite-nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.elite-nav .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.elite-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.elite-logo-text {
+  font-weight: 900;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+.elite-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.social-icon:hover {
+  background: var(--elite-orange);
+  border-color: var(--elite-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(251, 146, 60, 0.4);
+}
+
+/* Header Specific Social Styles */
+.elite-nav .elite-social-links {
+  gap: 8px;
+}
+.elite-nav .social-icon {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  opacity: 0.6;
+}
+.elite-nav .social-icon:hover {
+  opacity: 1;
+  background: transparent;
+  transform: scale(1.1);
+  box-shadow: none;
+}
+.elite-nav .social-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hide-mobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile { display: none; }
+}
+
+/* Footer */
+.elite-footer {
+  background: var(--elite-obsidian);
+  padding: 80px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+}
+
+#content {
+  padding-top: 85px;
+  min-height: 80vh;
+}
