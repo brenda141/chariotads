@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /author/
-
-Sitemap: https://chariotads.com/sitemap.xml

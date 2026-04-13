@@ -16,10 +16,10 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Top Adult Advertising Network | Buy & Sell Adult Traffic",
+    default: "Best Adult Ads Network | Buy & Sell Targeted Adult Traffic",
     template: "%s",
   },
-  description: "Join the best adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
+  description: "Join our elite adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
   keywords: [
     "buy cheap adult traffic", "buy and sell adult traffic", "advertise my adult website",
     "adult ad networks for publishers", "adult advertising network", "adult ads network",
@@ -68,8 +68,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://chariotads.com/",
-    title: "Top Adult Advertising Network | Buy & Sell Adult Traffic",
-    description: "Join the best adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
+    title: "Best Adult Ads Network | Buy & Sell Targeted Adult Traffic",
+    description: "Join our elite adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
     siteName: "Chariotads",
     images: [
       {
@@ -82,8 +82,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Top Adult Advertising Network | Buy & Sell Adult Traffic",
-    description: "Join the best adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
+    title: "Best Adult Ads Network | Buy & Sell Targeted Adult Traffic",
+    description: "Join our elite adult advertising network for publishers and advertisers. Buy targeted adult web traffic and monetize your site with high CPC ads today!",
     creator: "@chariotads36",
     images: ["https://chariotads.com/assets/images/logo.webp"],
   },

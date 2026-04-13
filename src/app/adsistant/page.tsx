@@ -71,7 +71,7 @@ export default function AdsistantPage() {
            </div>
            <div className="ads-visual-col center">
               <div className="suggestion-bubble-group">
-                 <img src="/assets/images/chariotads_elite_assistant_mascot.webp" width={1024} height={1024} loading="lazy"  alt="Mascot Circle" className="mascot-circle" / />
+                 <img src="/assets/images/chariotads_elite_assistant_mascot.webp" width={1024} height={1024} loading="lazy"  alt="Mascot Circle" className="mascot-circle" />
                  <motion.div 
                    className="bubble-text"
                    animate={{ y: [0, -10, 0] }}
@@ -147,7 +147,7 @@ export default function AdsistantPage() {
            <div className="ads-visual-col">
               <div className="troubleshoot-icon-box">
                  <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-                    < ShieldCheck size={120} color="#fb923c" strokeWidth={1} />
+                    <ShieldCheck size={120} color="#fb923c" strokeWidth={1} />
                  </motion.div>
               </div>
            </div>
