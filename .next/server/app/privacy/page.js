@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/privacy/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0qv9a4x._.js")
+R.c("server/chunks/ssr/0p4i_next_dist_esm_build_templates_app-page_0qfa_.5.js")
+R.c("server/chunks/ssr/[root-of-the-server]__12~pvz7._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0ckprka._.js")
+R.c("server/chunks/ssr/Videos_Chariotads_com_0xjae_z._.js")
+R.c("server/chunks/ssr/Videos_Chariotads_com_src_app_not-found_tsx_0oqn9na._.js")
+R.c("server/chunks/ssr/0p4i_next_dist_client_components_0e8m_ju._.js")
+R.c("server/chunks/ssr/0p4i_next_dist_client_components_builtin_unauthorized_0rufu48.js")
+R.c("server/chunks/ssr/0p4i_next_dist_client_components_builtin_global-error_0m97zd~.js")
+R.c("server/chunks/ssr/Videos_Chariotads_com__next-internal_server_app_privacy_page_actions_0577z3c.js")
+R.m(37600)
+module.exports=R.m(37600).exports

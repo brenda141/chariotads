@@ -6,7 +6,6 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-
 # 1. Set React's index.html as the primary homepage fallback ahead of WordPress index.php
 DirectoryIndex index.html index.php
 

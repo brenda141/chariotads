@@ -8,6 +8,7 @@ import "../FAQPage.css";
 import "../PrivacyPage.css";
 import "../PublisherPage.css";
 import "../TargetingPage.css";
+import "../BlogPage.css";
 import "../TermsPage.css";
 
 import { MessageSquare, X } from 'lucide-react';
